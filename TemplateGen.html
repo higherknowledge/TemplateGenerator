@@ -1,0 +1,92 @@
+<html>
+
+    <head>
+        <title>
+            HigherKnowledge
+        </title>
+         <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="Scripts/templateScript.js" type="text/javascript"></script>
+    <style>
+        body { padding-top : 90px}
+    </style>    
+    </head>
+
+   
+    
+    <body>     
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>                        
+                </button>
+        <a class="navbar-brand" href="#">HK Template Generator <span class="glyphicon glyphicon-pencil"></span> </a>
+            </div>
+        <div class="collapse navbar-collapse" id="navBar">
+         <ul class="nav navbar-nav">
+            <li><a href="#ccD">CC</a></li>
+            <li><a href="#subD">Subject</a></li>
+            <li><a href="#bodyD">Body</a></li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+           <h3> Email-Template <span class="glyphicon glyphicon-envelope"></span></h3>
+        </div>
+        <div class="panel-body">
+            <form>
+            <div class="form-group" id="subD">
+                <label for="sub" id="subL"><h4>Subject : </h4></label>
+                <input type="text" class="form-control" id="sub" placeholder="Enter Subject"/>
+            </div>
+            <div class="form-group" id="ccD">
+                <label for="cc" id="ccL"><h4>CC : </h4></label>
+                <input type="text" class="form-control" id="cc" placeholder="Enter CC"/>
+            </div>
+            <div class="form-group" id="bodyD"  >
+                <label for="body" id="bodyL"><h4>Body : </h4></label>
+                <textarea class="form-control" id="body" rows="10" placeholder="Enter Body" onselect="selected()"></textarea>
+                <br/>
+                <button type="button" class="btn btn-primary" onclick="highlight()">Highlight-selected</button>
+            </div>
+            <button type="button" class="btn btn-Success btn-block" onclick="getTemplate()"><h4>Get-Template</h4></button>
+            <br/>
+            <button type="button" class="btn btn-primary" onclick="seeTemplate()">test template</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading"><h2>Template</h2></div>
+      <div class="panel-body"><div class="well" id="template">Generated Template appears here</div></div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2>Testing</h2></div>
+      <div class="panel-body"><div class="well" id="templateLook">Generated Template's look appears here</div></div>
+    </div>
+    </div>
+    
+    </body>
+
+
+</html>
